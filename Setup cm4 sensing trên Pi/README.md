@@ -62,7 +62,19 @@ $ sudo nmtui
 
 - Chọn
   - Activate a connection > (chọn tên wifi) > (gõ pw - rostek2019)
-  
   - Ok
+
+##### Ngoài ra, nếu muốn sửa đổi bộ gõ (hiện nay gõ Shift+2 sẽ thành " thay vì @):
+- Gõ lệnh trên màn hình Grub để vào giao diện config keyboard
+
+``` sh
+$ sudo nano /etc/default/keyboard
+```
+
+<img src="keyboard.jpg" alt="File /etc/default/keyboard" style="zoom:40%;" />
+
+- Sửa giá trị của XKBLAYOUT thành "us"
+- Nhấn Ctrl+S để lưu
+- Nhấn Ctrl+X để thoát
 
 Setup cơ bản đã xong.
