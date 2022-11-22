@@ -74,6 +74,7 @@ $ sudo nano /etc/default/keyboard
 
 <img src="keyboard.jpg" alt="File /etc/default/keyboard" style="zoom:40%;" />
 
+-
   - Sửa giá trị của XKBLAYOUT thành "us"
   - Nhấn Ctrl+S để lưu
   - Nhấn Ctrl+X để thoát
@@ -84,6 +85,7 @@ $ sudo nano /etc/default/keyboard
 $ passwd
 ```
 
+-
   - Gõ mật khẩu hiện tại
   - Gõ mật khẩu mới
   - Gõ lại mật khẩu mới
