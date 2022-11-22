@@ -55,7 +55,7 @@ $ sudo raspi-config
 - Trở lại màn hình Grub, gõ lệnh để vào giao diện wifi manager
 
 ``` sh
-$ nmtui
+$ sudo nmtui
 ```
 
 <img src="network.jpg" alt="Giao diện network manager" style="zoom:40%;" />
