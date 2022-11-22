@@ -63,9 +63,10 @@ $ sudo nmtui
 - Chọn
   - Activate a connection > (chọn tên wifi) > (gõ pw - rostek2019)
   - Ok
+  
+- Gõ '''ifconfig''' để xem đã kết nối mạng hay chưa. Nếu kết nối thành công, ip sẽ hiện ra (với ethernet hiện dưới eth0, wifi hiện dưới wlan0)
 
-##### Ngoài ra, nếu muốn sửa đổi bộ gõ (hiện nay gõ Shift+2 sẽ thành " thay vì @):
-- Gõ lệnh trên màn hình Grub để vào giao diện config keyboard
+- Nếu muốn sửa đổi bộ gõ (hiện nay gõ Shift+2 sẽ thành " thay vì @), gõ lệnh trên màn hình Grub để vào giao diện config keyboard
 
 ``` sh
 $ sudo nano /etc/default/keyboard
@@ -73,8 +74,18 @@ $ sudo nano /etc/default/keyboard
 
 <img src="keyboard.jpg" alt="File /etc/default/keyboard" style="zoom:40%;" />
 
-- Sửa giá trị của XKBLAYOUT thành "us"
-- Nhấn Ctrl+S để lưu
-- Nhấn Ctrl+X để thoát
+  - Sửa giá trị của XKBLAYOUT thành "us"
+  - Nhấn Ctrl+S để lưu
+  - Nhấn Ctrl+X để thoát
+
+- Nếu cần đổi password cho pi (mặc định là raspberry), gõ:
+
+``` sh
+$ passwd
+```
+
+  - Gõ mật khẩu hiện tại
+  - Gõ mật khẩu mới
+  - Gõ lại mật khẩu mới
 
 Setup cơ bản đã xong.
