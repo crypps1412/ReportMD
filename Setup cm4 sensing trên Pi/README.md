@@ -78,6 +78,7 @@ $ sudo nano /etc/default/keyboard
   - Sửa giá trị của XKBLAYOUT thành "us"
   - Nhấn Ctrl+S để lưu
   - Nhấn Ctrl+X để thoát
+  - Gõ lệnh ```sudo systemctl restart console-setup.service``` để cập nhật chỉnh sửa bàn phím
 
 - Nếu cần đổi password cho pi (mặc định là raspberry), gõ:
 
