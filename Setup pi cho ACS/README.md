@@ -52,7 +52,7 @@ $ sudo nano /etc/netplan/50-cloud-init.yaml
             dhcp4: true
 ```
 
-- Các dòng trên để pi kết nối vào wifi tên wifi_name, mật khẩu pass, sẽ tự động tạo ra IP động. Để tạo IP tĩnh, thay dòng ```dhcp4: true``` bằng các dòng sau.
+- Các dòng trên để pi kết nối vào wifi tên ```your_wifi```, mật khẩu ```pass```, sẽ tự động tạo ra IP động. Để tạo IP tĩnh, thay dòng ```dhcp4: true``` bằng các dòng sau.
 
 ``` yaml
             dhcp4: no
