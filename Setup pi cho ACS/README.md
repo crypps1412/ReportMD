@@ -77,7 +77,7 @@ $ sudo netplan apply
 $ sudo apt install net-tools
 ```
 
-- Gõ '''ifconfig''' để xem đã kết nối mạng hay chưa. Nếu kết nối thành công, ip sẽ hiện ra (với ethernet hiện dưới eth0, wifi hiện dưới wlan0).
+- Gõ ```ifconfig``` để xem đã kết nối mạng hay chưa. Nếu kết nối thành công, ip sẽ hiện ra (với ethernet hiện dưới eth0, wifi hiện dưới wlan0).
 
 ![ifconfig](ifconfig.png)
 
