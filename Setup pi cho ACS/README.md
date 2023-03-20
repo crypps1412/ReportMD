@@ -59,7 +59,7 @@ $ sudo nano /etc/netplan/50-cloud-init.yaml
             addresses: [<your_ip>/24]
             gateway4: <your_gateway_ip>
             nameservers:
-            addresses: [8.8.8.8,8.8.4.4]
+                addresses: [8.8.8.8,8.8.4.4]
 ```
 
 ![50-cloud-init.yaml](static_ip.png)
