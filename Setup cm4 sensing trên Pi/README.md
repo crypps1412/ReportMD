@@ -2,7 +2,7 @@
 
 #### Bước 1: Chuẩn bị phần cứng
 
-<img src="raspi.jpg" alt="RasPi" style="width:75%;" />
+<img src="raspi.jpg" alt="RasPi" style="width:75%;text-align:center;" />
 
 - Tháo vỏ của Pi (rút các dây cắm, anten, terminal __>>__ tháo đế __>>__ tháo vỏ).
 
