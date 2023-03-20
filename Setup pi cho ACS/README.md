@@ -10,7 +10,7 @@
 
 - Dùng 1 dây USB to MicroUSB, kết nối máy tính dùng Window với cổng J10 của Pi.
 
-- Cài đặt phần mềm [Rpiboot](https://github.com/raspberrypi/usbboot/raw/master/win32/rpiboot_setup.exe)
+- Cài đặt phần mềm [Rpiboot](https://github.com/raspberrypi/usbboot/raw/master/win32/rpiboot_setup.exe), chạy file setup, nhấn next và finish.
 
 - Cấp nguồn cho Pi __>>__ chạy phần mềm rpiboot trong ```C:\Program File (x86)\Raspberry Pi\rpiboot.exe``` để cài driver và boot tool. Lúc này, Pi sẽ được coi như một ổ cứng ngoài của máy tính.
 
@@ -32,7 +32,7 @@
 
 #### Bước 3: Thiết lập mạng (khi không có kết nối ethernet, nếu có bỏ qua bước này)
 
-- Khai báo mạng wifi trong file /etc/netplan/50-cloud-init.yaml, gõ lệnh
+- Khai báo mạng wifi trong file /etc/netplan/50-cloud-init.yaml.
 
 ``` sh
 $ sudo nano /etc/netplan/50-cloud-init.yaml
@@ -40,7 +40,7 @@ $ sudo nano /etc/netplan/50-cloud-init.yaml
 
 ![50-cloud-init.yaml](50-cloud.png)
 
-- Thêm các dòng sau, chú ý không sử dụng tab mà phải sử dụng space để cách đầu dòng cho mỗi dòng
+- Thêm các dòng sau, chú ý không sử dụng tab mà phải sử dụng space để cách đầu dòng cho mỗi dòng.
 
 ``` yaml
     wifis:
@@ -52,7 +52,7 @@ $ sudo nano /etc/netplan/50-cloud-init.yaml
             dhcp4: true
 ```
 
-- Các dòng trên để pi kết nối vào wifi tên wifi_name, mật khẩu pass, sẽ tự động tạo ra IP động. Để tạo IP tĩnh, thay dòng ```dhcp4: true``` bằng các dòng sau
+- Các dòng trên để pi kết nối vào wifi tên wifi_name, mật khẩu pass, sẽ tự động tạo ra IP động. Để tạo IP tĩnh, thay dòng ```dhcp4: true``` bằng các dòng sau.
 
 ``` yaml
             dhcp4: no
@@ -64,26 +64,26 @@ $ sudo nano /etc/netplan/50-cloud-init.yaml
 
 ![50-cloud-init.yaml](static_ip.png)
 
-- Gõ lệnh để chạy phần sửa đổi, không xuất hiện lỗi là đã thiết lập mạng thành công (có thể xuất hiện warning)
+- Gõ lệnh để chạy phần sửa đổi, không xuất hiện lỗi là đã thiết lập mạng thành công (có thể xuất hiện warning).
 
 ``` sh
 $ sudo netplan generate
 $ sudo netplan apply
 ```
 
-- Cài đặt net-tools để lấy trạng thái mạng nhanh chóng
+- Cài đặt net-tools để lấy trạng thái mạng nhanh chóng.
 
 ``` sh
 $ sudo apt install net-tools
 ```
 
-- Gõ '''ifconfig''' để xem đã kết nối mạng hay chưa. Nếu kết nối thành công, ip sẽ hiện ra (với ethernet hiện dưới eth0, wifi hiện dưới wlan0)
+- Gõ '''ifconfig''' để xem đã kết nối mạng hay chưa. Nếu kết nối thành công, ip sẽ hiện ra (với ethernet hiện dưới eth0, wifi hiện dưới wlan0).
 
 ![ifconfig](ifconfig.png)
 
 #### Bước 4: Thiết lập RS485
 
-- Cài đặt 2 Board Support Package (BSP) cho pi để có thể kết nối các cổng RS485, RS232, CAN
+- Cài đặt 2 Board Support Package (BSP) cho pi để có thể kết nối các cổng RS485, RS232, CAN.
 
 ``` sh
 $ curl -sS https://apt.edatec.cn/pubkey.gpg | sudo apt-key add -
@@ -92,11 +92,11 @@ $ sudo apt update
 $ sudo apt install ed-cm4sen-rev1p0-bsp ed-rtc
 ```
 
-- Khởi động lại cho pi để áp dụng với lệnh ```sudo reboot```
+- Khởi động lại cho pi để áp dụng với lệnh ```sudo reboot```.
 
 #### Bước 5: Cài đặt ROS2 và các thư viện cần thiết
 
-- Cài đặt Ros2 Humble Hawksbill theo [hướng dẫn](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html]
+- Cài đặt Ros2 Humble Hawksbill theo [hướng dẫn](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html].
 
 ``` sh
 $ sudo apt install software-properties-common
@@ -109,19 +109,19 @@ $ sudo apt install ros-humble-ros-base
 $ echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 ```
 
-- Cài đặt compiler cho c++
+- Cài đặt compiler cho c++.
 
 ``` sh
 $ sudo apt-get install build-essential
 ```
 
-- Cài đặt colcon build tool
+- Cài đặt colcon build tool.
 
 ``` sh
 $ sudo apt install python3-colcon-common-extensions
 ```
 
-- Cài đặt python lib
+- Cài đặt python lib.
 
 ``` sh
 $ sudo apt install python3-pip
@@ -130,14 +130,14 @@ $ pip install pymodbus
 
 #### Bước 6: Cài đặt hệ thống ACS
 
-- Tạo workspace
+- Tạo workspace fms_ws với đường dẫn rostek_amr.
 
 ``` sh
 $ cd ~
 $ mkdir -p rostek_amr/fms_ws
 ```
 
-- Download thư mục [src]() vào thư mục fms_ws, gõ lệnh build workspace và source vào workspace
+- Download thư mục [src]() vào thư mục fms_ws, gõ lệnh build workspace và source vào workspace.
 
 ``` sh
 $ colcon build --symlink-install
@@ -146,7 +146,7 @@ $ echo 'fmsws="source ~/rostek_amr/fms_ws/install/setup.bash"' >> ~/.bash_aliase
 
 #### Bước 7: Chạy các package
 
-- Lần lượt chạy các package
+- Lần lượt chạy các package.
 
 ``` sh
 $ fmsws
