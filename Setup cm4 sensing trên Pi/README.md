@@ -2,13 +2,11 @@
 
 #### Bước 1: Chuẩn bị phần cứng
 
-<div style="text-align: center;">
-<img src="raspi.jpg" alt="RasPi" style="width:75%;" />
-</div>
+<img src="raspi.jpg" alt="RasPi"/>
 
 - Tháo vỏ của Pi (rút các dây cắm, anten, terminal __>>__ tháo đế __>>__ tháo vỏ).
 
-<img src="parts.jpg" alt="Các bộ phận" style="width:30%;" /><img src="inside.jpg" alt="Bên trong Pi" style="width:30%;" />
+<img src="parts.jpg" alt="Các bộ phận" style="width:35%;" /><img src="inside.jpg" alt="Bên trong Pi" style="width:65%;" />
 
 - Dùng 1 dây USB to MicroUSB, kết nối máy tính dùng Window với cổng J10 của Pi.
 
@@ -48,7 +46,7 @@
 $ sudo raspi-config
 ```
 
-<img src="config.jpg" alt="Giao diện config" style="width:75%;" />
+<img src="config.jpg" alt="Giao diện config" />
 
 - Chọn
   - 3 Interface Options > I2 SSH > Enable
@@ -60,7 +58,7 @@ $ sudo raspi-config
 $ sudo nmtui
 ```
 
-<img src="network.jpg" alt="Giao diện network manager" style="width:75%;" />
+<img src="network.jpg" alt="Giao diện network manager" />
 
 - Chọn
   - Activate a connection > (chọn tên wifi) > (gõ pw - rostek2019)
@@ -74,7 +72,7 @@ $ sudo nmtui
 $ sudo nano /etc/default/keyboard
 ```
 
-<img src="keyboard.jpg" alt="File /etc/default/keyboard" style="width:75%;" />
+<img src="keyboard.jpg" alt="File /etc/default/keyboard" />
 
 -
   - Sửa giá trị của XKBLAYOUT thành "us"
