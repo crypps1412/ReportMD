@@ -28,7 +28,7 @@
 
 - Cấp nguồn cho Pi __>>__ chạy phần mềm rpiboot trong ```C:\Program File (x86)\Raspberry Pi\rpiboot.exe``` để cài driver và boot tool. Lúc này, Pi sẽ được coi như một ổ cứng ngoài của máy tính.
 
-![Chưa hiện ổ cứng](appear.png) 
+![Hiển thị ổ cứng](appear.png) 
 
 - Giải nén file zip chứa img __>>__ chạy phần mềm Rufus để load img vào Pi.
 
