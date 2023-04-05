@@ -30,6 +30,8 @@
 
 - Rút dây USB __>>__ rút nguồn __>>__ lắp lại vỏ Pi như cũ __>>__ kết nối Pi với màn hình và bàn phím __>>__ cấp nguồn lại cho Pi.
 
+- Nhập user và password đều là ```ubuntu```
+
 #### Bước 3: Thiết lập mạng (khi không có kết nối ethernet, nếu có bỏ qua bước này)
 
 - Khai báo mạng wifi trong file /etc/netplan/50-cloud-init.yaml.
