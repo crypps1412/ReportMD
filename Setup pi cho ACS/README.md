@@ -85,6 +85,8 @@ $ sudo apt install net-tools
 
 #### Bước 4: Thiết lập RS485
 
+![Pi_CM4_interface](Pi_CM4_interface.png)
+
 - Cài đặt 2 Board Support Package (BSP) cho pi để có thể kết nối các cổng RS485, RS232, CAN.
 
 ``` sh
