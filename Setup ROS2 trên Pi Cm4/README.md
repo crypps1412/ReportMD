@@ -42,7 +42,7 @@ $ sudo nano /etc/netplan/50-cloud-init.yaml
 
 ![50-cloud-init.yaml](50-cloud.png)
 
-- Thêm các dòng sau, chú ý không sử dụng tab mà phải sử dụng space để cách đầu dòng cho mỗi dòng.
+- Thêm các dòng sau.
 
 ``` yaml
     wifis:
