@@ -18,7 +18,7 @@
 
 #### Bước 2: Cài đặt hệ điều hành
 
-- Download [Ubuntu 22.04 (Jammy Jellyfish)](https://releases.ubuntu.com/jammy/ubuntu-22.04.2-live-server-amd64.iso)
+- Download [Ubuntu 22.04 (Jammy Jellyfish)](https://cdimage.ubuntu.com/releases/22.04/release/ubuntu-22.04.2-live-server-arm64.iso)
 
 - Download [Rufus (3.17)](https://v51.x8top.net/tmp082020/cf/soft/2021/10/ba/4/rufus_317.exe)
 
