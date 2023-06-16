@@ -142,7 +142,34 @@ $ sudo apt install python3-pip
 $ pip install pymodbus
 ```
 
-#### Bước 6: Cài đặt hệ thống ACS
+#### Bước 6: Cài đặt image đã xây dựng đến thời điểm này
+
+- Tạo image dưới dạng file gz, lưu ra một ổ cứng ngoài.
+
+  - Kiểm tra tên của ổ cứng ngoài (```/dev/sda2```) và tên của vùng nhớ chính (```/dev/mmcblk0```).
+
+```sh
+$ lsblk
+```
+
+![lsblk](lsblk.png)
+
+  - Kết nối vào ổ cứng ngoài.
+
+```sh
+$ sudo mkdir /media/external
+$ sudo mount -o remove_hiberfile /dev/sda2 /media/external
+```
+
+  - Sử dụng lệnh ```dd``` để lưu vùng nhớ chính thành image, nén vào bộ nhớ ngoài.
+
+```sh
+$ sudo dd if=/dev/mmcblk0 bs=4M conv=sparse status=progress | gzip > /media/pc_sdd/app/backup/ubuntu_amr.gz
+```
+
+- Khi đã có image, ở các lần sau cài đặt cho pi, chọn file "ubuntu_amr.gz" trong Rufus thay vì download bản ubuntu iso trên mạng.
+
+#### Bước 7: Cài đặt hệ thống ACS
 
 - Tạo workspace fms_ws với đường dẫn rostek_amr.
 
@@ -158,7 +185,7 @@ $ colcon build --symlink-install
 $ echo 'fmsws="source ~/rostek_amr/fms_ws/install/setup.bash"' >> ~/.bash_aliases
 ```
 
-#### Bước 7: Chạy các package
+#### Bước 8: Chạy các package
 
 - Lần lượt chạy các package.
 
