@@ -98,6 +98,16 @@ $ sudo apt install ed-cm4sen-rev1p0-bsp ed-rtc
 
 - Khởi động lại cho pi để áp dụng với lệnh ```sudo reboot```.
 
+- Để kiểm tra driver đã hoạt động, gõ lệnh sau.
+
+```sh
+$ ls -l /dev/ttyAMA*
+```
+
+- Hiện ra như hình là đã thành công.
+
+![AMA port list](driver_check.png)
+
 #### Bước 5: Cài đặt ROS2 và các thư viện cần thiết
 
 - Cài đặt Ros2 Humble Hawksbill theo [hướng dẫn](https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html].
