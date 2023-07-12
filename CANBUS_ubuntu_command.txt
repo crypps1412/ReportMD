@@ -1,0 +1,19 @@
+#### Setup can0: read CANBUS, baudrate 5000
+sudo ip link can0 type can bitrate 500000
+
+#### Open (up)/Close (down) can0
+sudo ip link set can0 up/down
+
+#### Show can0 status
+sudo ip -details -statistics link show can0
+
+#### Read can0 continuously
+candump can0
+
+#### Send one data to can0
+cansend can0 <id_eg:000>#<data_eg:0100>
+<id>: type of transmission + device id
+<data>: hex type
+
+#### Send random data to can0
+cangen can0
