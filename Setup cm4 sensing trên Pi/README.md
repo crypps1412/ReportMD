@@ -91,4 +91,14 @@ $ passwd
   - Gõ mật khẩu mới
   - Gõ lại mật khẩu mới
 
+- Sửa lỗi download thư viện python lâu
+  - Là do pip bị gắn thêm đường linh không cần thiết
+  - Gõ lệnh sau trong terminal:
+
+``` sh
+$ pip config --global unset global.extra-index-url
+```
+
+  - Kiểm tra đường dẫn thừa bị xoá bằng lệnh ```pip config --global list```
+
 Setup cơ bản đã xong.
